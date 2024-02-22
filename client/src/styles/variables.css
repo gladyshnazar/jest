@@ -1,0 +1,62 @@
+:root {
+  --font-family: "Halyard Display", sans-serif;
+  --font-body-family: "Halyard Display", sans-serif;
+  --font-heading-family: "Halyard Display", sans-serif;
+  --font-body-weight: 400;
+  --font-body-weight-bold: 400; /* TODO: Find out why 700 was here */
+  --font-body-style: normal;
+
+  --color-g-text: #0c2828;
+  --color-g-text-alpha-80: rgba(6, 20, 20, 0.8);
+  --color-g-text-alpha-70: rgba(6, 20, 20, 0.7);
+  --color-g-text-alpha-50: rgba(6, 20, 20, 0.5);
+  --color-g-text-alpha-60: rgba(6, 20, 20, 0.6);
+  --color-g-text-alpha-40: rgba(6, 20, 20, 0.4);
+  --color-g-text-alpha-30: rgba(6, 20, 20, 0.3);
+  --color-g-text-alpha-20: rgba(6, 20, 20, 0.2);
+  --color-g-text-alpha-10: rgba(6, 20, 20, 0.1);
+  --color-g-bg: #e6eaea;
+  --color-g-bg-d5: #d8dede;
+  --color-g-bg-d15: #cad3d3;
+  --color-g-bg-alpha-0: rgba(230, 234, 234, 0);
+  --color-g-bg-alpha-70: rgba(230, 234, 234, 0.7);
+  --color-g-bg-border: #afbbbb;
+  --color-g-fg: #f2f6ff;
+  --color-g-fg-alpha-70: rgba(242, 246, 255, 0.7);
+  --color-g-fg-alpha-50: rgba(242, 246, 255, 0.5);
+  --color-g-fg-d10: #bfd3ff;
+  --color-g-fg-d20: #8cafff;
+  --color-g-accent: #1f706c;
+  --color-g-sale: #0c2828;
+  --color-g-warning: #fd7e14;
+  --color-g-success: #198754;
+  --color-g-danger: #dc3545;
+  --color-g-star-rating: #ffc700;
+  --color-g-button-text: #f2f6ff;
+  --color-g-button-bg: #eb3f5e;
+  --color-g-button-bg-hover: #e9284b;
+  --color-g-button-shadow-l1: rgba(131, 14, 35, 0.3);
+  --color-g-button-shadow-l2: rgba(131, 14, 35, 0.15);
+  --color-g-button-shadow-l3: #bb1332;
+  --color-g-button-bg-gradient: #ff7890;
+  --color-g-button-buy-it-now-text: #f2f6ff;
+  --color-g-button-buy-it-now-bg: #eb3f5e;
+  --color-g-button-buy-it-now-bg-hover: #e9284b;
+  --color-g-product-badge-sale: #eb3f5e;
+  --color-g-product-badge-sold-out: #7d959f;
+  --border-radius-base: 1.125rem;
+  --border-radius-inner: 0.7rem;
+  --border-radius-sm: 0.25rem;
+  --transition-base: 0.3s;
+  --box-shadow-large: rgb(50 50 93 / 25%) 0px 50px 100px -20px,
+    rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+  --container-width: 1400px;
+  --container-spacer: min(3rem, 5vw);
+  --glob-gutter: clamp(3vw, 1.4rem, 30px);
+  --box-shadow-base: 0 0 7px #00000020;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-base: 0s !important;
+  }
+}
