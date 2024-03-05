@@ -37,6 +37,9 @@ mongoose.Promise = Promise;
 mongoose.connect(process.env.MONGO_URI!);
 mongoose.connection.on("error", (error: Error) => console.error(error));
 
+app.get("/", (req: express.Request, res: express.Response) => {
+  return res.send("Express Typescript on Vercel");
+});
 app.use("/", router());
 
 app.use(

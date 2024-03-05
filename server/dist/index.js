@@ -40,6 +40,9 @@ server.listen(port, () => {
 mongoose_1.default.Promise = Promise;
 mongoose_1.default.connect(process.env.MONGO_URI);
 mongoose_1.default.connection.on("error", (error) => console.error(error));
+app.get("/", (req, res) => {
+    return res.send("Express Typescript on Vercel");
+});
 app.use("/", (0, router_1.default)());
 app.use((err, req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     if (!(0, error_handler_1.isTrustedError)(err)) {
