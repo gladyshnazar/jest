@@ -16,7 +16,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL!,
+    origin: "https://jest-medicine.vercel.app",
     credentials: true,
   })
 );
