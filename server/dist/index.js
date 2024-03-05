@@ -25,7 +25,7 @@ const endpoints_1 = require("./constants/endpoints");
 require("dotenv").config();
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)({
-    origin: "https://jest-medicine.vercel.app",
+    origin: "*",
     credentials: true,
 }));
 app.use((0, compression_1.default)());
