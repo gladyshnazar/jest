@@ -27,11 +27,11 @@ app.use(cookieParser());
 app.use(endpoints.stripe.webhook, bodyParser.raw({ type: "application/json" }));
 app.use(bodyParser.json());
 
-const port = process.env.PORT || 8080;
-const server = http.createServer(app);
-server.listen(port, () => {
-  console.log(`Server running on ${process.env.SERVER_URL}`);
-});
+// const port = process.env.PORT || 8080;
+// const server = http.createServer(app);
+// server.listen(port, () => {
+//   console.log(`Server running on ${process.env.SERVER_URL}`);
+// });
 
 mongoose.Promise = Promise;
 mongoose.connect(process.env.MONGO_URI!);
