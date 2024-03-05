@@ -42,8 +42,8 @@ export const postControllerCreateStripeSession = asyncWrapper(
       line_items: lineItems,
       mode: "payment",
       payment_method_types: ["card"],
-      success_url: `${process.env.BASE_URL}/profile?menu=orders`,
-      cancel_url: `${process.env.BASE_URL}/payment-error`,
+      success_url: `${process.env.CLIENT_URL}/profile?menu=orders`,
+      cancel_url: `${process.env.CLIENT_URL}/payment-error`,
       client_reference_id: _id.toString(),
       metadata: sessionMetadata,
     });

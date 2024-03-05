@@ -16,7 +16,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173", /* TODO: Change */
+    origin: process.env.CLIENT_URL!,
     credentials: true,
   })
 );
@@ -30,7 +30,7 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 8080;
 const server = http.createServer(app);
 server.listen(port, () => {
-  console.log("Server running on http://localhost:8080/");
+  console.log(`Server running on ${process.env.SERVER_URL}`);
 });
 
 mongoose.Promise = Promise;
