@@ -15,7 +15,7 @@ declare global {
 export const protect = asyncHandler(async (req, res, next) => {
   let token;
 
-  token = req.cookies.jwt;
+  token = req.cookies.jwt_token;
 
   if (!token) {
     throw new AppError(

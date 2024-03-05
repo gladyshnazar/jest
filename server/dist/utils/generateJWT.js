@@ -8,7 +8,7 @@ const generateJWT = (res, userId) => {
     const token = jsonwebtoken_1.default.sign({ userId }, process.env.JWT_SECRET, {
         expiresIn: "3h",
     });
-    res.cookie("jwt", token, {
+    res.cookie("jwt_token", token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         sameSite: "strict", // Prevent CSRF attacks

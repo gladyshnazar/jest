@@ -7,7 +7,7 @@ const generateJWT = (res: express.Response, userId: Types.ObjectId) => {
     expiresIn: "3h",
   });
 
-  res.cookie("jwt", token, {
+  res.cookie("jwt_token", token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "strict", // Prevent CSRF attacks

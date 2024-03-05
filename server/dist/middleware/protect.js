@@ -20,7 +20,7 @@ const HttpStatusCode_1 = __importDefault(require("../utils/HttpStatusCode"));
 const AppError_1 = require("../AppError");
 exports.protect = (0, express_async_handler_1.default)((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     let token;
-    token = req.cookies.jwt;
+    token = req.cookies.jwt_token;
     if (!token) {
         throw new AppError_1.AppError("NO_TOKEN", HttpStatusCode_1.default.UNAUTHORIZED, true, "Unauthenticated");
     }
