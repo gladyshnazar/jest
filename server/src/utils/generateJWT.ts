@@ -13,6 +13,7 @@ const generateJWT = (res: express.Response, userId: Types.ObjectId) => {
     sameSite: "strict", // Prevent CSRF attacks
     maxAge: 3 * 60 * 60 * 1000, // 3 hours
     path: "/",
+    domain: "jest-medicine.vercel.app",
   });
 };
 
