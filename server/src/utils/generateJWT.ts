@@ -9,9 +9,10 @@ const generateJWT = (res: express.Response, userId: Types.ObjectId) => {
 
   res.cookie("jwt", token, {
     httpOnly: true,
-    secure: false, // Use secure cookies in production
+    secure: process.env.NODE_ENV === "production",
     sameSite: "strict", // Prevent CSRF attacks
     maxAge: 3 * 60 * 60 * 1000, // 3 hours
+    path: "/",
   });
 };
 
