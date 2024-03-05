@@ -9,7 +9,7 @@ const generateJWT = (res, userId) => {
         expiresIn: "3h",
     });
     res.cookie("jwt_token", token, {
-        httpOnly: true,
+        httpOnly: false,
         secure: process.env.NODE_ENV === "production",
         sameSite: "strict", // Prevent CSRF attacks
         maxAge: 3 * 60 * 60 * 1000, // 3 hours
