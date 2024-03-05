@@ -10,9 +10,10 @@ const generateJWT = (res, userId) => {
     });
     res.cookie("jwt", token, {
         httpOnly: true,
-        secure: false, // Use secure cookies in production
+        secure: process.env.NODE_ENV === "production",
         sameSite: "strict", // Prevent CSRF attacks
         maxAge: 3 * 60 * 60 * 1000, // 3 hours
+        path: "/",
     });
 };
 exports.default = generateJWT;
