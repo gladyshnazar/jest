@@ -4,7 +4,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchUser = createAsyncThunk(
   endpoints.user.fetch,
-  async (_, thunkAPI) => {
+  async (_, { rejectWithValue }) => {
     try {
       const response = await axios.post(
         endpoints.user.fetch,
@@ -15,7 +15,7 @@ export const fetchUser = createAsyncThunk(
       );
       return response.data.user;
     } catch (err: any) {
-      return thunkAPI.rejectWithValue(err.response.data.error);
+      return rejectWithValue(err.response.data.error);
     }
   }
 );
