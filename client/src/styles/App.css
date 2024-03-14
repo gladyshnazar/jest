@@ -1313,12 +1313,12 @@ a.pink.\@shadow:hover {
 }
 
 .hero-slider-slide.slide-1 {
-  background: url("../public/images/banners/mobile-1.png");
+  background: url("/images/banners/mobile-1.png");
   background-size: cover;
 }
 
 .hero-slider-slide.slide-2 {
-  background: url("../public/images/banners/mobile-2.png");
+  background: url("/images/banners/mobile-2.png");
   background-size: cover;
 }
 
@@ -1329,12 +1329,12 @@ a.pink.\@shadow:hover {
     align-items: flex-start;
   }
   .hero-slider-slide.slide-1 {
-    background: url("../public/images/banners/desktop-1.png");
+    background: url("/images/banners/desktop-1.png");
     background-size: cover;
   }
 
   .hero-slider-slide.slide-2 {
-    background: url("../public/images/banners/desktop-2.png");
+    background: url("/images/banners/desktop-2.png");
     background-size: cover;
   }
 }
